@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0f1e;
+  --card: #111827;
+  --border: #1f2937;
+  --brand: #0ea5e9;
+  --accent: #f97316;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand); }
+
+/* Tool textarea */
+.tool-textarea {
+  @apply w-full bg-dark-card border border-dark-border rounded-xl p-4 text-sm font-mono text-slate-200 resize-none focus:outline-none focus:border-brand-500 transition-colors;
+  min-height: 140px;
+}
+
+/* Tool card */
+.tool-card {
+  @apply bg-dark-card border border-dark-border rounded-2xl p-5 hover:border-brand-500 transition-all duration-300 cursor-pointer;
+}
+
+/* Btn primary */
+.btn-primary {
+  @apply bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-2.5 rounded-xl transition-colors duration-200 text-sm;
+}
+
+/* Btn secondary */
+.btn-secondary {
+  @apply bg-dark-border hover:bg-slate-700 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition-colors duration-200 text-sm;
+}
+
+/* Category pill */
+.cat-pill {
+  @apply text-xs font-semibold px-3 py-1 rounded-full border cursor-pointer transition-all duration-200;
+}
+
+/* AdSense placeholder */
+.ad-slot {
+  @apply w-full bg-dark-card border border-dark-border rounded-xl flex items-center justify-center text-xs text-slate-600 font-mono;
+}
+
+/* Stat badge */
+.stat-badge {
+  @apply inline-flex items-center gap-1.5 bg-dark-card border border-dark-border px-3 py-1.5 rounded-lg text-xs text-slate-400;
+}
